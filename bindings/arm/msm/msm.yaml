@@ -186,8 +186,6 @@ properties:
               - qcom,mtp
               - qcom,kera-qrd
               - qcom,qrd
-              - qcom,kera-idp
-              - qcom,idp
               - qcom,kera-rcm
               - qcom,rcm
           - const: qcom,kera
@@ -203,8 +201,6 @@ properties:
               - qcom,mtp
               - qcom,kerap-qrd
               - qcom,qrd
-              - qcom,kerap-idp
-              - qcom,idp
               - qcom,kerap-rcm
               - qcom,rcm
           - const: qcom,kerap
