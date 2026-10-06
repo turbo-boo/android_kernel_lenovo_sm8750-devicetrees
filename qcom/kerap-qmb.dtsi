@@ -1,0 +1,12 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ */
+
+#include "kerap.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. KeraP QMB SoC";
+	compatible = "qcom,kerap-qmb";
+	qcom,msm-id = <720 0x10000>;
+};
