@@ -375,6 +375,11 @@ dtb-y += $(parrot_tuivm-dtb-y)
 endif
 endif
 
+# Kbuild (LineageOS inline) builds only need the sun SoC bases, which
+# merge_dtbs.py combines with the techpack DTBOs, and the elden board
+# overlay. The base/board combinations and other SoCs are not shipped.
+dtb-y := $(SUN_BASE_DTB) $(SUN_APQ_BASE_DTB) $(ELDEN_BOARDS)
+
 always-y        := $(dtb-y)
 subdir-y        := $(dts-dirs)
 subdir-y        += audio bt camera data display dsp eSE eva fingerprint graphics mm mmrm nfc synx video wlan
