@@ -52,6 +52,12 @@ sun-dtb-$(CONFIG_ARCH_SUN) += \
 	$(call add-overlays, $(SUN_BOARDS) $(APQ_SUN_BOARDS),$(SUN_APQ_BASE_DTB))
 sun-overlays-dtb-$(CONFIG_ARCH_SUN) += $(SUN_BOARDS) $(NOAPQ_SUN_BOARDS) $(SUN_BASE_DTB) $(SUN_APQ_BASE_DTB)
 
+# The elden board overlay already carries the techpack board nodes, so it
+# only applies to the merged sun bases and gets no SoC-only combination.
+ELDEN_BOARDS += sun-elden-overlay.dtbo
+sun-dtb-$(CONFIG_ARCH_SUN) += $(ELDEN_BOARDS)
+sun-overlays-dtb-$(CONFIG_ARCH_SUN) += $(ELDEN_BOARDS)
+
 TUNA_BASE_DTB += tuna.dtb tuna7.dtb
 TUNA_APQ_BASE_DTB += tunap.dtb
 TUNA_BOARDS += \
